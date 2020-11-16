@@ -1,0 +1,23 @@
+# Instruction to run the project
+This application uses three databases: PostgreSQL, MySQL, MariaDB.
+For easy setup of these databases, you can use docker-compose:
+
+* docker-compose up -d
+
+Docker-compose will start up following application:
+
+* PostgreSQL (on port 5432)
+* MySQL (on port 3306)
+* MariaDB (on port 3307)
+* Adminer (on 8080 port. You can use Adminer for easier administration of PostgreSQL database)
+
+With a properly configured instance of PostgreSQL you should be able to start up the application by the following command:
+* ./gradlew bootRun
+
+By default applications uses 8081 port.
+
+# Test the project
+For testing purposes you can use provided json configuration for Postman.
+The name of the json configuration is 'SqlBenchmark.postman.json'.
+
+Also, there is integration test 'DatabaseBenchmarkServiceITest' which you can modify for using it with your own input data.
